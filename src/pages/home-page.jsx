@@ -26,7 +26,7 @@ const HomePage = () => {
 
   return (
     <>
-      {hasFilters && <ProductList products={products} />}
+      {hasFilters && <ProductList key="filtered" products={products} />}
       {totalProductsValue > 0 && !hasFilters && (
         <InfiniteScroll
           dataLength={products.length}
@@ -49,7 +49,7 @@ const HomePage = () => {
             </Typography>
           }
         >
-          <ProductList products={products} />
+          <ProductList key="infinite" products={products} />
         </InfiniteScroll>
       )}
     </>

@@ -28,7 +28,7 @@ export const ProductProvider = ({ children }) => {
 
   const fetchProductsWithDelay = useCallback(
     async (pageParam) => {
-      await delay(1000);
+      await delay(300);
       if (hasFilters) {
         return await getAllProducts(pageParam, limit, category, priceRange);
       }
