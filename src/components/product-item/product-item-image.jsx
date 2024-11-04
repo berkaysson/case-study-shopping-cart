@@ -17,11 +17,6 @@ export const ProductItemImage = ({ product, handleAddToCart }) => {
           zIndex: 9,
           opacity: 0.8,
           position: "absolute",
-          transition: (theme) =>
-            theme.transitions.create("all", {
-              easing: theme.transitions.easing.easeInOut,
-              duration: theme.transitions.duration.shorter,
-            }),
         }}
       >
         <AddShoppingCart />

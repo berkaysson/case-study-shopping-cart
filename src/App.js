@@ -1,9 +1,10 @@
 import React from "react";
 import { QueryClient, QueryClientProvider } from "react-query";
 import HomePage from "./pages/home-page";
-import Container from "@mui/material/Container";
 import { ProductProvider } from "./contexts/product-context";
 import { CartProvider } from "./contexts/cart-context";
+import Navigation from "./components/navigation/navigation";
+import { Stack } from "@mui/material";
 
 const queryClient = new QueryClient();
 
@@ -12,9 +13,10 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <CartProvider>
         <ProductProvider>
-          <Container maxWidth="lg" className="app">
+          <Stack className="app" sx={{ height: "100vh" }} spacing={3}>
+            <Navigation />
             <HomePage />
-          </Container>
+          </Stack>
         </ProductProvider>
       </CartProvider>
     </QueryClientProvider>
