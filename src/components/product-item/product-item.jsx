@@ -1,18 +1,18 @@
+import React from "react";
 import {
   Card,
   CardContent,
   CardMedia,
   Typography,
   Button,
-  TextField,
 } from "@mui/material";
-import React, { useState } from "react";
+import { useCartContext } from "../../hooks/use-cart-context";
 
 const ProductItem = ({ product }) => {
-  const [quantity, setQuantity] = useState(1);
+  const { addItemToCart } = useCartContext();
 
   const handleAddToCart = () => {
-    console.log(`${quantity} of ${product.product} added to cart!`);
+    addItemToCart(product);
   };
 
   return (
@@ -29,13 +29,6 @@ const ProductItem = ({ product }) => {
           {product.category}
         </Typography>
         <Typography variant="body2">${product.price}</Typography>
-        <TextField
-          type="number"
-          value={quantity}
-          onChange={(e) => setQuantity(Math.max(1, e.target.value))}
-          sx={{ width: "60px", marginTop: 2, marginRight: 2 }}
-          slotProps={{ input: { min: 1 } }}
-        />
         <Button
           variant="contained"
           color="primary"
