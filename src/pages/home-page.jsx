@@ -3,6 +3,7 @@ import ProductList from "../components/product-list/product-list";
 import { CircularProgress, Stack, Typography } from "@mui/material";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { useProductContext } from "../hooks/use-product-context";
+import { CartDrawerIcon } from "../components/cart-drawer-icon/cart-drawer-icon";
 
 const HomePage = () => {
   const {
@@ -26,6 +27,7 @@ const HomePage = () => {
 
   return (
     <>
+      <CartDrawerIcon />
       {hasFilters && <ProductList key="filtered" products={products} />}
       {totalProductsValue > 0 && !hasFilters && (
         <InfiniteScroll

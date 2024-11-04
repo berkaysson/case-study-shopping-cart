@@ -4,6 +4,11 @@ export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
+  const [cartOpen, setCartOpen] = useState(false);
+
+  const toggleCartOpen = useCallback(() => {
+    setCartOpen((prevCartOpen) => !prevCartOpen);
+  }, []);
 
   const addItemToCart = useCallback((product) => {
     setCartItems((prevItems) => {
@@ -49,6 +54,7 @@ export const CartProvider = ({ children }) => {
     cartItems,
     totalCartValue,
     cartItemCount,
+    cartOpen
   });
 
   const contextValue = useMemo(
@@ -59,6 +65,7 @@ export const CartProvider = ({ children }) => {
       updateItemQuantity,
       totalCartValue,
       cartItemCount,
+      toggleCartOpen
     }),
     [
       cartItems,
@@ -67,6 +74,7 @@ export const CartProvider = ({ children }) => {
       updateItemQuantity,
       totalCartValue,
       cartItemCount,
+      toggleCartOpen
     ]
   );
 
