@@ -1,0 +1,248 @@
+{
+  "totalProducts": 27,
+  "products": [
+    {
+      "uuid": "dffbfb62-9d8a-45ab-a2f8-37043e4182d5",
+      "name": "Wireless Bluetooth Headphones",
+      "imageUrl": "https://img.freepik.com/free-photo/fitness-girl-with-wireless-headphones_1385-417.jpg?t=st=1730736500~exp=1730740100~hmac=1e4e68ee32dcb2491c67b98b187528857daf14c863c0758c273c390bb968731b&w=900",
+      "price": 59.99,
+      "category": "Electronics",
+      "popularity": 120,
+      "rate": 4.5
+    },
+    {
+      "uuid": "d9ec3c76-d8e3-4c5a-9c3c-b0a75e70a45e",
+      "name": "Eco-Friendly Yoga Mat",
+      "imageUrl": "https://img.freepik.com/free-vector/realistic-yoga-myofascial-massage-icons-set-with-rug-mat-foam-roller-isolated-vector-illustration_1284-79048.jpg?t=st=1730736411~exp=1730740011~hmac=49dff13a7e6b6536719d31d35b6c9016356db418aceccc6257daf4900eae9bc4&w=996",
+      "price": 29.99,
+      "category": "Fitness",
+      "popularity": 80,
+      "rate": 4.7
+    },
+    {
+      "uuid": "b3f3d9e2-1f2d-4c9c-8b07-c5824e9f18c2",
+      "name": "Smartwatch with Heart Rate Monitor",
+      "imageUrl": "https://cdn.stocksnap.io/img-thumbs/960w/watch-technology_OJYGY9OEB9.jpg",
+      "price": 99.99,
+      "category": "Electronics",
+      "popularity": 150,
+      "rate": 4.6
+    },
+    {
+      "uuid": "ef2e3f6c-85e7-418e-8d1e-e1ebd5de432e",
+      "name": "Stylish Backpack",
+      "imageUrl": "https://img.freepik.com/free-photo/view-little-boy-with-backpack-exploring-nature_23-2150520978.jpg?t=st=1730736596~exp=1730740196~hmac=811b5473d9a6eaa6584cdba82ff157f4362d353e62550fcbccaf55ffab90d7a5&w=740",
+      "price": 49.99,
+      "category": "Fashion",
+      "popularity": 60,
+      "rate": 4.2
+    },
+    {
+      "uuid": "4e36f9e1-3e8b-4d6a-99d1-2aaf7e74e74b",
+      "name": "Portable Phone Charger",
+      "imageUrl": "https://img.freepik.com/free-photo/charger-usb-cable-type-c-red-background_58702-4607.jpg?t=st=1730736618~exp=1730740218~hmac=d8bea0c960f045af02db95d48fa6f431e1c66fe7e93e0cb1f23078455eb749b4&w=900",
+      "price": 24.99,
+      "category": "Electronics",
+      "popularity": 200,
+      "rate": 4.8
+    },
+    {
+      "uuid": "b35b774e-2980-4a3b-b0eb-b257a87245a6",
+      "name": "Coffee Maker with Grinder",
+      "imageUrl": "https://img.freepik.com/free-photo/close-up-kettle-ceramic-mug_23-2148324852.jpg?t=st=1730736646~exp=1730740246~hmac=4fd2d3550898313ba91b258d44b42974080c016736b5fe95c92b5d6f416f2ced&w=740",
+      "price": 79.99,
+      "category": "Home Appliances",
+      "popularity": 95,
+      "rate": 4.4
+    },
+    {
+      "uuid": "10b7e1e5-9e79-4c94-a07e-b51f437a6cb1",
+      "name": "Men's Running Shoes",
+      "imageUrl": "https://img.freepik.com/premium-photo/women-s-black-leather-boots-white-background-shoes-options-its-layout-autumn-shoes-boots-autumn-boots-shoes-close-up_173815-21340.jpg?w=900",
+      "price": 89.99,
+      "category": "Fashion",
+      "popularity": 130,
+      "rate": 4.6
+    },
+    {
+      "uuid": "8b9b2c5f-bbcf-4b89-80c2-54b8e487e8c0",
+      "name": "Wireless Mouse",
+      "imageUrl": "https://img.freepik.com/free-photo/red-computer-mouse_1260-13.jpg?t=st=1730736693~exp=1730740293~hmac=72502f572814ef5cc74a9d3af72e8ad419576a9e9555c9f6a33852da09f01679&w=900",
+      "price": 19.99,
+      "category": "Electronics",
+      "popularity": 110,
+      "rate": 4.3
+    },
+    {
+      "uuid": "7d9c7a7b-f299-47c0-bd46-d36af2258f34",
+      "name": "Artisan Soap Gift Set",
+      "imageUrl": "https://img.freepik.com/free-photo/valentines-day-still-life-design_23-2149246362.jpg?t=st=1730736721~exp=1730740321~hmac=a538e7c89a65955919d2aa49c76d7305052a2646ad1314f1ddebc1c2fa061c0e&w=740",
+      "price": 34.99,
+      "category": "Health",
+      "popularity": 75,
+      "rate": 4.5
+    },
+    {
+      "uuid": "fb9c0e90-5119-4c69-9ae3-29d72b29e295",
+      "name": "Bluetooth Speakers",
+      "imageUrl": "https://img.freepik.com/free-photo/still-life-tech-device_23-2150722621.jpg?t=st=1730736739~exp=1730740339~hmac=bf8d9ca6334bacfaa6fde752c5907b496fca35fafc975b85faa9138642127da1&w=740",
+      "price": 49.99,
+      "category": "Electronics",
+      "popularity": 145,
+      "rate": 4.5
+    },
+    {
+      "uuid": "ed7bda43-7758-4de1-a205-78c83769f40b",
+      "name": "Organic Cotton T-Shirt",
+      "imageUrl": "https://img.freepik.com/free-photo/woman-looking-tired-after-shopping_23-2148302827.jpg?t=st=1730736790~exp=1730740390~hmac=31dfa232c101221bc4d3bb0777a74fbf1395463d7517a37062e7c4f8b0fd36a7&w=740",
+      "price": 25.99,
+      "category": "Fashion",
+      "popularity": 90,
+      "rate": 4.4
+    },
+    {
+      "uuid": "b1b4b0b2-fc85-4f32-b689-5e4c4912052e",
+      "name": "Electric Kettle",
+      "imageUrl": "https://img.freepik.com/free-photo/electric-kettle-filled-with-water_23-2148728711.jpg?t=st=1730736806~exp=1730740406~hmac=b78d901e46b31b98331fbc8d88d4f4bf47abe15d0750ad26e607d0a30be62e22&w=740",
+      "price": 39.99,
+      "category": "Home Appliances",
+      "popularity": 110,
+      "rate": 4.6
+    },
+    {
+      "uuid": "4b4a16cc-9a78-4f7d-bb69-1c7e1c4eaf55",
+      "name": "Leather Wallet",
+      "imageUrl": "https://img.freepik.com/free-psd/3d-purse-with-coins-front_602782-91.jpg?t=st=1730736825~exp=1730740425~hmac=a34ad4fb8ac2bc7bbb1da265eadf0c604400bce61e6a66b9466fba96380149d8&w=740",
+      "price": 34.99,
+      "category": "Fashion",
+      "popularity": 65,
+      "rate": 4.3
+    },
+    {
+      "uuid": "8e11b62a-c4e3-4b43-b9e1-c8cda5de83da",
+      "name": "Fitness Tracker",
+      "imageUrl": "https://img.freepik.com/free-vector/realistic-design-fitness-trackers_23-2148509775.jpg?t=st=1730736844~exp=1730740444~hmac=e8b1f4967aaa801ff84f0917138a66ca6a0b550ca4b151d4166354a788590ad5&w=740",
+      "price": 69.99,
+      "category": "Electronics",
+      "popularity": 160,
+      "rate": 4.7
+    },
+    {
+      "uuid": "ffde4c45-9fd9-4969-a7cb-5b45ae474f54",
+      "name": "Non-Stick Cookware Set",
+      "imageUrl": "https://img.freepik.com/free-photo/side-view-cooking-set-pots-pans-wooden-shelves-jpg_140725-12791.jpg?t=st=1730736863~exp=1730740463~hmac=dac8eb1d2b20540c64c8bc2f7c126c6b0dbe111e9282748b4e837a5765e15422&w=740",
+      "price": 89.99,
+      "category": "Home Appliances",
+      "popularity": 50,
+      "rate": 4.2
+    },
+    {
+      "uuid": "943c9274-2eae-48d3-88e5-70266c6e2041",
+      "name": "Wireless Earbuds",
+      "imageUrl": "https://img.freepik.com/free-photo/still-life-tech-device_23-2150722704.jpg?t=st=1730736889~exp=1730740489~hmac=e9edf31e70229e4c88de9769de620153453cca3bcaf0ee9d119cf5e5af942c49&w=740",
+      "price": 59.99,
+      "category": "Electronics",
+      "popularity": 200,
+      "rate": 4.8
+    },
+    {
+      "uuid": "b9f7d93e-bc9e-4f30-87a2-1d45e6e7a5c8",
+      "name": "Outdoor Camping Tent",
+      "imageUrl": "https://img.freepik.com/free-photo/shot-tent-outside-house_181624-39280.jpg?t=st=1730736903~exp=1730740503~hmac=c5da05b9f5ee806d02d816d09b55cf989230956aff950ca2464999aea4f7c06d&w=740",
+      "price": 149.99,
+      "category": "Fitness",
+      "popularity": 75,
+      "rate": 4.5
+    },
+    {
+      "uuid": "41f019f8-c70a-4aa2-b81c-4a0a7160de5d",
+      "name": "Graphic Design Book",
+      "imageUrl": "https://img.freepik.com/free-psd/vertical-flyer-essential-oil-bottle-podium-with-geometric-shapes_23-2148855182.jpg?t=st=1730736929~exp=1730740529~hmac=4101f7fbaed8216e3f3ca9683ae4a087820b4c00b173094a2d445bf7a9e859d2&w=740",
+      "price": 29.99,
+      "category": "Entertainment",
+      "popularity": 40,
+      "rate": 4.4
+    },
+    {
+      "uuid": "f67f8e5d-df2a-4c3f-b3e3-ef48d9aa2d43",
+      "name": "Gaming Mouse Pad",
+      "imageUrl": "https://img.freepik.com/free-photo/party-space-ready-online-celebration_23-2149347281.jpg?t=st=1730737257~exp=1730740857~hmac=b6e8fcaf3e6f2ed185c0bb955866aeebfbe923c24675703822ba516a315f869f&w=900",
+      "price": 19.99,
+      "category": "Entertainment",
+      "popularity": 85,
+      "rate": 4.5
+    },
+    {
+      "uuid": "2a89e9f4-40b0-4e2b-8f8d-ff58e19e7e7c",
+      "name": "UV Sanitizer Box",
+      "imageUrl": "https://img.freepik.com/free-vector/realistic-hand-sanitizer-ad_52683-46463.jpg?t=st=1730737276~exp=1730740876~hmac=ce5abe991fec9bc5fc53687aa40039f725cf5933b66b1f6fc6d6d8150e01c542&w=740",
+      "price": 39.99,
+      "category": "Health",
+      "popularity": 70,
+      "rate": 4.6
+    },
+    {
+      "uuid": "b88d159e-01dc-40ea-bb68-57d257b3e771",
+      "name": "Portable Blender",
+      "imageUrl": "https://img.freepik.com/free-photo/view-electronic-product-balancing-podium_23-2150141324.jpg?t=st=1730737299~exp=1730740899~hmac=cb4128c3ca18f7efd35f2cbe7fd8ec21f32820d8800c73ac7ae90e197b4c659f&w=740",
+      "price": 29.99,
+      "category": "Home Appliances",
+      "popularity": 120,
+      "rate": 4.7
+    },
+    {
+      "uuid": "a4570c44-1d56-41b3-bf1e-5c76a6ed78db",
+      "name": "Wireless Charging Pad",
+      "imageUrl": "https://img.freepik.com/free-photo/wireless-charger-digital-device_53876-97322.jpg?t=st=1730737320~exp=1730740920~hmac=6e81c3a433c8a5e446c96d6fed0b84f91d59a6a0389cf6440ca562ab01518ecb&w=740",
+      "price": 24.99,
+      "category": "Electronics",
+      "popularity": 140,
+      "rate": 4.5
+    },
+    {
+      "uuid": "315e1cde-f08d-4bfa-b1b7-d8b335a08b1d",
+      "name": "Multi-Purpose Kitchen Scissors",
+      "imageUrl": "https://img.freepik.com/free-psd/scissors-object-transparent-psd_7939-4552.jpg?t=st=1730737339~exp=1730740939~hmac=33c65d10d11158de68621392d14c212865ff5f5f56320f1dfbcffcc1b52f855f&w=740",
+      "price": 15.99,
+      "category": "Home Appliances",
+      "popularity": 95,
+      "rate": 4.4
+    },
+    {
+      "uuid": "1d9b5e5b-2085-4ae2-a1c8-4ef3144d3e7d",
+      "name": "Smart Air Purifier",
+      "imageUrl": "https://img.freepik.com/premium-photo/there-is-white-air-purifier-sitting-couch_1028873-102593.jpg?w=740",
+      "price": 149.99,
+      "category": "Home Appliances",
+      "popularity": 150,
+      "rate": 4.8
+    },
+    {
+      "uuid": "ca48e8b5-daa1-4184-9b09-8a57b75c4a9b",
+      "name": "Pet Grooming Kit",
+      "imageUrl": "https://img.freepik.com/free-photo/pet-accessories-still-life-concept-with-grooming-objects-food_23-2148949582.jpg?t=st=1730737391~exp=1730740991~hmac=d8b1862278b18d1e0a903ce7f9d2c60812220e7f269e26464c7d0cc38bdca962&w=900",
+      "price": 39.99,
+      "category": "Health",
+      "popularity": 65,
+      "rate": 4.6
+    },
+    {
+      "uuid": "ed473e36-7689-4dbe-91ff-0c1a0d4f5c73",
+      "name": "Electric Screwdriver Set",
+      "imageUrl": "https://img.freepik.com/free-photo/flat-lay-screw-collection_23-2148557983.jpg?t=st=1730737412~exp=1730741012~hmac=9cfb7459fc2a1315157037e8dd701f44711eb7a6b4e41be2fef416b2daa4e1e8&w=900",
+      "price": 49.99,
+      "category": "Home Appliances",
+      "popularity": 80,
+      "rate": 4.3
+    },
+    {
+      "uuid": "ab0a4e6e-33e5-42eb-81e0-64b982943c71",
+      "name": "Wireless Smart LED Bulbs",
+      "imageUrl": "https://img.freepik.com/free-vector/different-shapes-sizes-led-bulbs-with-heat-sinks-fins-e27-base-screw-type-socket-3d-realistic-vector-set-isolated_1441-3444.jpg?t=st=1730737429~exp=1730741029~hmac=7fa8470c1273e1ecd107fa4000eb11e1c4f30037460abd1c0ec9a8b2a5cd2981&w=740",
+      "price": 34.99,
+      "category": "Home Appliances",
+      "popularity": 110,
+      "rate": 4.7
+    }
+  ]
+}
