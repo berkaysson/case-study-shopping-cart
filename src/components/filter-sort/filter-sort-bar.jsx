@@ -1,12 +1,5 @@
 import React, { useState } from "react";
-import {
-  Box,
-  Tooltip,
-  IconButton,
-  Menu,
-  MenuItem,
-  Typography,
-} from "@mui/material";
+import { Box, Menu, MenuItem, Typography, Button } from "@mui/material";
 import SortIcon from "@mui/icons-material/Sort";
 import { useProductContext } from "../../hooks/use-product-context";
 import FilterSidebar from "./filter-sidebar";
@@ -59,11 +52,13 @@ const FilterSortBar = () => {
         MyCommerce
       </Typography>
       <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
-        <Tooltip title="Sort">
-          <IconButton onClick={handleSortClick} aria-label="sort">
-            <SortIcon />
-          </IconButton>
-        </Tooltip>
+        <Button
+          variant="contained"
+          startIcon={<SortIcon />}
+          onClick={handleSortClick}
+        >
+          Sort
+        </Button>
 
         <Menu
           anchorEl={anchorEl}
