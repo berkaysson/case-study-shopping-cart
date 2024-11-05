@@ -17,7 +17,7 @@
       "price": 29.99,
       "category": "Fitness",
       "popularity": 80,
-      "rate": 4.7
+      "rate": 5
     },
     {
       "id": "b3f3d9e2-1f2d-4c9c-8b07-c5824e9f18c2",
@@ -26,7 +26,7 @@
       "price": 99.99,
       "category": "Electronics",
       "popularity": 150,
-      "rate": 4.6
+      "rate": 5
     },
     {
       "id": "ef2e3f6c-85e7-418e-8d1e-e1ebd5de432e",
@@ -44,7 +44,7 @@
       "price": 24.99,
       "category": "Electronics",
       "popularity": 200,
-      "rate": 4.8
+      "rate": 5
     },
     {
       "id": "b35b774e-2980-4a3b-b0eb-b257a87245a6",
@@ -62,7 +62,7 @@
       "price": 89.99,
       "category": "Fashion",
       "popularity": 130,
-      "rate": 4.6
+      "rate": 5
     },
     {
       "id": "8b9b2c5f-bbcf-4b89-80c2-54b8e487e8c0",
@@ -107,7 +107,7 @@
       "price": 39.99,
       "category": "Home Appliances",
       "popularity": 110,
-      "rate": 4.6
+      "rate": 4.5
     },
     {
       "id": "4b4a16cc-9a78-4f7d-bb69-1c7e1c4eaf55",
@@ -125,7 +125,7 @@
       "price": 69.99,
       "category": "Electronics",
       "popularity": 160,
-      "rate": 4.7
+      "rate": 4.1
     },
     {
       "id": "ffde4c45-9fd9-4969-a7cb-5b45ae474f54",
@@ -143,7 +143,7 @@
       "price": 59.99,
       "category": "Electronics",
       "popularity": 200,
-      "rate": 4.8
+      "rate": 4.4
     },
     {
       "id": "b9f7d93e-bc9e-4f30-87a2-1d45e6e7a5c8",
@@ -179,7 +179,7 @@
       "price": 39.99,
       "category": "Health",
       "popularity": 70,
-      "rate": 4.6
+      "rate": 2.5
     },
     {
       "id": "b88d159e-01dc-40ea-bb68-57d257b3e771",
@@ -188,7 +188,7 @@
       "price": 29.99,
       "category": "Home Appliances",
       "popularity": 120,
-      "rate": 4.7
+      "rate": 3.7
     },
     {
       "id": "a4570c44-1d56-41b3-bf1e-5c76a6ed78db",
@@ -215,7 +215,7 @@
       "price": 149.99,
       "category": "Home Appliances",
       "popularity": 150,
-      "rate": 4.8
+      "rate": 5
     },
     {
       "id": "ca48e8b5-daa1-4184-9b09-8a57b75c4a9b",
@@ -224,7 +224,7 @@
       "price": 39.99,
       "category": "Health",
       "popularity": 65,
-      "rate": 4.6
+      "rate": 4.3
     },
     {
       "id": "ed473e36-7689-4dbe-91ff-0c1a0d4f5c73",
@@ -242,7 +242,7 @@
       "price": 34.99,
       "category": "Home Appliances",
       "popularity": 110,
-      "rate": 4.7
+      "rate": 2
     }
   ]
 }
