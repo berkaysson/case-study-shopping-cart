@@ -2,6 +2,7 @@ import React from "react";
 import ProductItem from "../product-item/product-item";
 
 import { Grid2 } from "@mui/material";
+import ProductSearch from "./product-search";
 
 const ProductList = ({ products }) => {
   return (
@@ -21,6 +22,9 @@ const ProductList = ({ products }) => {
           justifyContent: "center",
         }}
       >
+        <Grid2 size={{ xs: 12 }}>
+          <ProductSearch />
+        </Grid2>
         {products.map((product) => (
           <Grid2 size={{ xs: 12, sm: 6, md: 4 }} key={product.id}>
             <ProductItem product={product} />

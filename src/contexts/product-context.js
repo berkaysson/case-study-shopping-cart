@@ -21,6 +21,7 @@ export const ProductProvider = ({ children }) => {
   const [category, setCategory] = useState("all");
   const [rate, setRate] = useState(null);
   const [sortOption, setSortOption] = useState("Featured");
+  const [searchTerm, setSearchTerm] = useState("");
   const limit = 6;
 
   const hasFilters = useMemo(
@@ -29,8 +30,9 @@ export const ProductProvider = ({ children }) => {
       priceRange[0] > 0 ||
       priceRange[1] < 200 ||
       rate ||
-      sortOption !== "Featured",
-    [category, priceRange, rate, sortOption]
+      sortOption !== "Featured" ||
+      searchTerm.length > 0,
+    [category, priceRange, rate, sortOption, searchTerm]
   );
 
   const fetchProductsWithDelay = useCallback(
@@ -87,8 +89,17 @@ export const ProductProvider = ({ children }) => {
         ? product.category === category || category === "all"
         : true;
 
-        const matchesRating = rate ? product.rate >= rate : true;
-      return withinPriceRange && matchesCategory && matchesRating;
+      const matchesRating = rate ? product.rate >= rate : true;
+      const matchesSearchTerm = product.name
+        .toLowerCase()
+        .includes(searchTerm.toLowerCase());
+
+      return (
+        withinPriceRange &&
+        matchesCategory &&
+        matchesRating &&
+        matchesSearchTerm
+      );
     });
 
     return filteredProducts.sort((a, b) => {
@@ -107,15 +118,16 @@ export const ProductProvider = ({ children }) => {
           return 0; // For "Featured"
       }
     });
-  }, [data?.pages, priceRange, category, rate, sortOption]);
+  }, [data?.pages, priceRange, category, rate, sortOption, searchTerm]);
 
   const filters = useMemo(
     () => ({
       category,
       priceRange,
-      rate
+      rate,
+      searchTerm,
     }),
-    [category, priceRange, rate]
+    [category, priceRange, rate, searchTerm]
   );
 
   const contextValue = useMemo(
@@ -129,6 +141,7 @@ export const ProductProvider = ({ children }) => {
       hasFilters,
       setSortOption,
       setFilters,
+      setSearchTerm,
       filters,
     }),
     [
@@ -141,6 +154,7 @@ export const ProductProvider = ({ children }) => {
       hasFilters,
       setSortOption,
       setFilters,
+      setSearchTerm,
       filters,
     ]
   );
