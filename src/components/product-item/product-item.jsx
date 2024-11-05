@@ -33,7 +33,7 @@ const ProductItem = ({ product }) => {
           }}
         >
           <Rating
-            name="product-rating"
+            name="product-rate"
             value={product.rate || 0}
             precision={0.5}
             readOnly

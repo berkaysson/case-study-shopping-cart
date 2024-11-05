@@ -17,31 +17,38 @@ export const ProductContext = createContext();
 
 export const ProductProvider = ({ children }) => {
   const [totalProductsValue, setTotalProductsValue] = useState(0);
-  const [priceRange, setPriceRange] = useState([0, Infinity]);
-  const [category, setCategory] = useState(null);
+  const [priceRange, setPriceRange] = useState([0, 200]);
+  const [category, setCategory] = useState("all");
+  const [rate, setRate] = useState(null);
+  const [sortOption, setSortOption] = useState("Featured");
   const limit = 6;
 
   const hasFilters = useMemo(
-    () => category || priceRange[0] > 0 || priceRange[1] < Infinity,
-    [category, priceRange]
+    () =>
+      category !== "all" ||
+      priceRange[0] > 0 ||
+      priceRange[1] < 200 ||
+      rate ||
+      sortOption !== "Featured",
+    [category, priceRange, rate, sortOption]
   );
 
   const fetchProductsWithDelay = useCallback(
     async (pageParam) => {
       await delay(300);
       if (hasFilters) {
-        return await getAllProducts(pageParam, limit, category, priceRange);
+        return await getAllProducts();
       }
       return await getProducts(pageParam, limit);
     },
-    [hasFilters, category, priceRange]
+    [hasFilters]
   );
 
   const { data, isLoading, isError, fetchNextPage, hasNextPage } =
     useInfiniteQuery({
-      queryKey: ["products", category, priceRange],
+      queryKey: ["products", category, priceRange, sortOption],
       queryFn: async ({ pageParam = 1 }) => {
-        return await fetchProductsWithDelay(pageParam, limit);
+        return await fetchProductsWithDelay(pageParam);
       },
       getNextPageParam: (lastPage, allPages) => {
         const totalFetched = allPages.reduce(
@@ -64,34 +71,77 @@ export const ProductProvider = ({ children }) => {
     fetchTotalProducts();
   }, []);
 
-  const products = useMemo(() => {
+  const setFilters = useCallback((newFilters) => {
+    if (newFilters.category !== undefined) setCategory(newFilters.category);
+    if (newFilters.priceRange !== undefined)
+      setPriceRange(newFilters.priceRange);
+    if (newFilters.rate !== undefined) setRate(newFilters.rate);
+  }, []);
+
+  const sortedProducts = useMemo(() => {
     const flatProducts = data?.pages.flat() || [];
-    return flatProducts.filter((product) => {
+    const filteredProducts = flatProducts.filter((product) => {
       const withinPriceRange =
         product.price >= priceRange[0] && product.price <= priceRange[1];
-      const matchesCategory = category ? product.category === category : true;
-      return withinPriceRange && matchesCategory;
+      const matchesCategory = category
+        ? product.category === category || category === "all"
+        : true;
+
+        const matchesRating = rate ? product.rate >= rate : true;
+      return withinPriceRange && matchesCategory && matchesRating;
     });
-  }, [data, category, priceRange]);
+
+    return filteredProducts.sort((a, b) => {
+      switch (sortOption) {
+        case "Price":
+          return a.price - b.price;
+        case "Category":
+          return a.category.localeCompare(b.category);
+        case "Name":
+          return a.name.localeCompare(b.name);
+        case "Rate":
+          return b.rate - a.rate;
+        case "Popularity":
+          return b.popularity - a.popularity;
+        default:
+          return 0; // For "Featured"
+      }
+    });
+  }, [data?.pages, priceRange, category, rate, sortOption]);
+
+  const filters = useMemo(
+    () => ({
+      category,
+      priceRange,
+      rate
+    }),
+    [category, priceRange, rate]
+  );
 
   const contextValue = useMemo(
     () => ({
-      products,
+      products: sortedProducts,
       isLoading,
       isError,
       fetchNextPage,
       hasNextPage,
       totalProductsValue,
       hasFilters,
+      setSortOption,
+      setFilters,
+      filters,
     }),
     [
-      products,
+      sortedProducts,
       isLoading,
       isError,
       fetchNextPage,
       hasNextPage,
       totalProductsValue,
       hasFilters,
+      setSortOption,
+      setFilters,
+      filters,
     ]
   );
 

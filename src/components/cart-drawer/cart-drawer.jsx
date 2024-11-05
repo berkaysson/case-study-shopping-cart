@@ -37,10 +37,10 @@ const CartDrawer = () => {
     <>
       <CartDrawerIcon />
 
-      <Drawer anchor="right" open={cartOpen} onClose={toggleCartOpen}>
+      <Drawer anchor="bottom" open={cartOpen} onClose={toggleCartOpen}>
         <Box
           sx={{
-            width: 350,
+            width: 1,
             p: 2,
             display: "flex",
             flexDirection: "column",

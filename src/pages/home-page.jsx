@@ -5,6 +5,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import { useProductContext } from "../hooks/use-product-context";
 import { CartDrawerIcon } from "../components/cart-drawer-icon/cart-drawer-icon";
 import CartDrawer from "../components/cart-drawer/cart-drawer";
+import FilterSortBar from "../components/filter-sort/filter-sort-bar";
 
 const HomePage = () => {
   const {
@@ -30,6 +31,7 @@ const HomePage = () => {
     <>
       <CartDrawerIcon />
       <CartDrawer />
+      <FilterSortBar />
       {hasFilters && <ProductList key="filtered" products={products} />}
       {totalProductsValue > 0 && !hasFilters && (
         <InfiniteScroll

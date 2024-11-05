@@ -13,7 +13,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <CartProvider>
         <ProductProvider>
-          <Stack className="app" sx={{ height: "100vh" }} spacing={3}>
+          <Stack className="app" sx={{ height: "100vh" }}>
             <Navigation />
             <HomePage />
           </Stack>

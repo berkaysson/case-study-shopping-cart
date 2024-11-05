@@ -8,7 +8,7 @@ export function CartDrawerIcon() {
     <Box
       sx={{
         right: 0,
-        top: 100,
+        top: 250,
         zIndex: 999,
         display: "flex",
         cursor: "pointer",
