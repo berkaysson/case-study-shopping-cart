@@ -6,14 +6,13 @@ import {
   IconButton,
   Divider,
   List,
-  ListItem,
-  TextField,
   Button,
 } from "@mui/material";
-import { Close, Delete } from "@mui/icons-material";
+import { Close } from "@mui/icons-material";
 import { useCartContext } from "../../hooks/use-cart-context";
 import { useToast } from "../../hooks/use-toast";
 import { CartDrawerIcon } from "./cart-drawer-icon";
+import CartDrawerListItem from "./cart-drawer-list-item";
 
 const CartDrawer = () => {
   const [isCheckoutLoading, setIsCheckoutLoading] = useState(false);
@@ -89,62 +88,13 @@ const CartDrawer = () => {
             <List>
               {cartItems.length > 0 ? (
                 cartItems.map((item) => (
-                  <ListItem
+                  <CartDrawerListItem
                     key={item.id}
-                    sx={{
-                      py: 1,
-                      px: 0.25,
-                      display: "flex",
-                      justifyContent: "space-between",
-                      alignItems: "center",
-                      width: "100%",
-                      borderRadius: 1,
-                      boxShadow: 1,
-                      bgcolor: "background.default",
-                      mb: 1,
-                    }}
-                  >
-                    <Box sx={{ flex: 1, overflow: "hidden" }}>
-                      <Typography noWrap>{item.name}</Typography>
-                      <Typography
-                        variant="body2"
-                        color="text.secondary"
-                        sx={{
-                          whiteSpace: "normal",
-                          wordWrap: "break-word",
-                        }}
-                      >
-                        ${item.price.toFixed(2)}
-                      </Typography>
-                    </Box>
-
-                    {/* Quantity Input */}
-                    <Box sx={{ ml: 2, display: "flex", alignItems: "center" }}>
-                      <TextField
-                        type="number"
-                        value={item.quantity}
-                        onChange={(e) =>
-                          handleQuantityChange(item.id, e.target.value)
-                        }
-                        sx={{
-                          width: 60,
-                          bgcolor: "background.paper",
-                          borderRadius: 1,
-                          boxShadow: 1,
-                        }}
-                        slotProps={{ input: { min: 1 } }}
-                      />
-
-                      {/* Remove Item Button */}
-                      <IconButton
-                        sx={{ ml: 1 }}
-                        onClick={() => removeItemFromCart(item.id)}
-                        disabled={isCheckoutLoading}
-                      >
-                        <Delete color="error" />
-                      </IconButton>
-                    </Box>
-                  </ListItem>
+                    item={item}
+                    handleQuantityChange={handleQuantityChange}
+                    removeItemFromCart={removeItemFromCart}
+                    isCheckoutLoading={isCheckoutLoading}
+                  />
                 ))
               ) : (
                 <Typography
