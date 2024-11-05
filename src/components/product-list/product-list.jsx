@@ -11,10 +11,17 @@ const ProductList = ({ products }) => {
         container
         spacing={2}
         className="product-grid"
-        sx={{ p: 2, width: "100%", mx: "auto" }}
+        sx={{
+          p: 2,
+          width: "100%",
+          mx: "auto",
+          mt: 12,
+          bgcolor: "background.darkPaper",
+          borderRadius: 1.5,
+        }}
       >
         {products.map((product) => (
-          <Grid2 xs={12} sm={6} md={4} key={product.id}>
+          <Grid2 size={{ xs: 12, sm: 6, md: 4 }} key={product.id}>
             <ProductItem product={product} />
           </Grid2>
         ))}

@@ -13,15 +13,22 @@ const ProductItem = ({ product }) => {
   return (
     <Card
       sx={{
-        "&:hover .add-cart-btn": { opacity: 1 },
-        width: "280px",
-        height: "400px",
+        backgroundColor: "background.paper",
+        "&:hover": {
+          boxShadow: 4,
+          transform: "translateY(-2px)",
+        },
+        width: 1,
+        maxWidth: 450,
+        transition: "all 0.2s ease-in-out",
       }}
     >
       <ProductItemImage product={product} handleAddToCart={handleAddToCart} />
 
-      <Stack spacing={1} sx={{ p: 1 }}>
-        <Typography variant="subtitle1" noWrap>{product.name}</Typography>
+      <Stack spacing={1} sx={{ p: 2 }}>
+        <Typography variant="subtitle1" noWrap>
+          {product.name}
+        </Typography>
 
         <Box
           component="span"

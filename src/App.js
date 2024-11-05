@@ -3,23 +3,25 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import HomePage from "./pages/home-page";
 import { ProductProvider } from "./contexts/product-context";
 import { CartProvider } from "./contexts/cart-context";
-import Navigation from "./components/navigation/navigation";
-import { Stack } from "@mui/material";
+import { Stack, ThemeProvider } from "@mui/material";
+import theme from "./styles/theme";
 
 const queryClient = new QueryClient();
 
 function App() {
   return (
-    <QueryClientProvider client={queryClient}>
-      <CartProvider>
-        <ProductProvider>
-          <Stack className="app" sx={{ height: "100vh" }}>
-            <Navigation />
-            <HomePage />
-          </Stack>
-        </ProductProvider>
-      </CartProvider>
-    </QueryClientProvider>
+    <ThemeProvider theme={theme}>
+      <QueryClientProvider client={queryClient}>
+        <CartProvider>
+          <ProductProvider>
+            <Stack className="app" sx={{ height: "100vh" }}>
+              {/* <Navigation /> */}
+              <HomePage />
+            </Stack>
+          </ProductProvider>
+        </CartProvider>
+      </QueryClientProvider>
+    </ThemeProvider>
   );
 }
 

@@ -1,5 +1,12 @@
 import React, { useState } from "react";
-import { Box, Tooltip, IconButton, Menu, MenuItem } from "@mui/material";
+import {
+  Box,
+  Tooltip,
+  IconButton,
+  Menu,
+  MenuItem,
+  Typography,
+} from "@mui/material";
 import SortIcon from "@mui/icons-material/Sort";
 import { useProductContext } from "../../hooks/use-product-context";
 import FilterSidebar from "./filter-sidebar";
@@ -39,40 +46,50 @@ const FilterSortBar = () => {
         justifyContent: "space-between",
         padding: 2,
         zIndex: 1000,
-        backgroundColor: "white",
-        boxShadow: "0px 4px 6px rgba(0,0,0,0.1)",
+        bgcolor: (theme) => theme.palette.background.paper,
+        backgroundColor: (theme) => theme.palette.background.paper,
+        boxShadow: (theme) => theme.shadows[1],
       }}
     >
-      <Tooltip title="Sort">
-        <IconButton onClick={handleSortClick} aria-label="sort">
-          <SortIcon />
-        </IconButton>
-      </Tooltip>
+      <Typography variant="h1">MyCommerce</Typography>
+      <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+        <Tooltip title="Sort">
+          <IconButton onClick={handleSortClick} aria-label="sort">
+            <SortIcon />
+          </IconButton>
+        </Tooltip>
 
-      <Menu
-        anchorEl={anchorEl}
-        open={Boolean(anchorEl)}
-        onClose={() => handleSortClose()}
-        anchorOrigin={{
-          vertical: "bottom",
-          horizontal: "right",
-        }}
-        transformOrigin={{
-          vertical: "top",
-          horizontal: "right",
-        }}
-      >
-        {sortOptions.map((option) => (
-          <MenuItem key={option} onClick={() => handleSortClose(option)}>
-            {option}
-          </MenuItem>
-        ))}
-      </Menu>
+        <Menu
+          anchorEl={anchorEl}
+          open={Boolean(anchorEl)}
+          onClose={() => handleSortClose()}
+          anchorOrigin={{
+            vertical: "bottom",
+            horizontal: "right",
+          }}
+          transformOrigin={{
+            vertical: "top",
+            horizontal: "right",
+          }}
+        >
+          {sortOptions.map((option) => (
+            <MenuItem
+              key={option}
+              onClick={() => handleSortClose(option)}
+              sx={{
+                "&:hover": {
+                  backgroundColor: (theme) => theme.palette.primary.light,
+                  color: (theme) => theme.palette.primary.contrastText,
+                },
+              }}
+            >
+              {option}
+            </MenuItem>
+          ))}
+        </Menu>
 
-      <FilterSidebar
-        filters={filters}
-        setFilters={setFilters}
-      />
+        <FilterSidebar filters={filters} setFilters={setFilters} />
+      </Box>
     </Box>
   );
 };

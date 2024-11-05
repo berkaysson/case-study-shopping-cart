@@ -4,6 +4,7 @@ import { useCartContext } from "../../hooks/use-cart-context";
 
 export function CartDrawerIcon() {
   const { cartItemCount, toggleCartOpen } = useCartContext();
+
   return (
     <Box
       sx={{
@@ -17,9 +18,9 @@ export function CartDrawerIcon() {
         borderTopLeftRadius: 16,
         borderBottomLeftRadius: 16,
         bgcolor: "background.paper",
-        "&:hover": { opacity: 0.72 },
-        boxShadow: "0 2px 8px rgb(0 0 0 / 15%)",
-        padding: "12px 16px",
+        "&:hover": { boxShadow: 1 },
+        boxShadow: 4,
+        padding: (theme) => theme.spacing(1.5, 2),
       }}
       onClick={toggleCartOpen}
     >

@@ -4,13 +4,13 @@ import {
   Box,
   Typography,
   IconButton,
+  Divider,
   List,
   ListItem,
-  Divider,
-  Button,
   TextField,
+  Button,
 } from "@mui/material";
-import { Close } from "@mui/icons-material";
+import { Close, Delete } from "@mui/icons-material";
 import { useCartContext } from "../../hooks/use-cart-context";
 import { CartDrawerIcon } from "../cart-drawer-icon/cart-drawer-icon";
 
@@ -40,11 +40,14 @@ const CartDrawer = () => {
       <Drawer anchor="bottom" open={cartOpen} onClose={toggleCartOpen}>
         <Box
           sx={{
+            mx: "auto",
             width: 1,
+            maxWidth: 600,
             p: 2,
             display: "flex",
             flexDirection: "column",
             height: "100%",
+            bgcolor: "background.paper",
           }}
         >
           {/* Header */}
@@ -53,9 +56,11 @@ const CartDrawer = () => {
               display: "flex",
               justifyContent: "space-between",
               alignItems: "center",
+              borderRadius: 2,
+              p: 1,
             }}
           >
-            <Typography variant="h6">Your Cart</Typography>
+            <Typography variant="h4">Your Cart</Typography>
             <IconButton onClick={toggleCartOpen}>
               <Close />
             </IconButton>
@@ -72,24 +77,28 @@ const CartDrawer = () => {
                     key={item.id}
                     sx={{
                       py: 1,
-                      px: 0,
+                      px: 0.25,
                       display: "flex",
                       justifyContent: "space-between",
                       alignItems: "center",
                       width: "100%",
+                      borderRadius: 1,
+                      boxShadow: 1,
+                      bgcolor: "background.default",
+                      mb: 1,
                     }}
                   >
                     <Box sx={{ flex: 1, overflow: "hidden" }}>
                       <Typography noWrap>{item.name}</Typography>
                       <Typography
                         variant="body2"
-                        color="textSecondary"
+                        color="text.secondary"
                         sx={{
                           whiteSpace: "normal",
                           wordWrap: "break-word",
                         }}
                       >
-                        ${item.price}
+                        ${item.price.toFixed(2)}
                       </Typography>
                     </Box>
 
@@ -101,19 +110,31 @@ const CartDrawer = () => {
                         onChange={(e) =>
                           handleQuantityChange(item.id, e.target.value)
                         }
-                        sx={{ width: 60 }}
-                        inputProps={{ min: 1 }}
+                        sx={{
+                          width: 60,
+                          bgcolor: "background.paper",
+                          borderRadius: 1,
+                          boxShadow: 1,
+                        }}
+                        slotProps={{ input: { min: 1 } }}
                       />
 
                       {/* Remove Item Button */}
-                      <IconButton onClick={() => removeItemFromCart(item.id)}>
-                        <Close />
+                      <IconButton
+                        sx={{ ml: 1 }}
+                        onClick={() => removeItemFromCart(item.id)}
+                      >
+                        <Delete color="error" />
                       </IconButton>
                     </Box>
                   </ListItem>
                 ))
               ) : (
-                <Typography variant="body2" color="textSecondary">
+                <Typography
+                  variant="body2"
+                  color="text.secondary"
+                  sx={{ textAlign: "center" }}
+                >
                   Your cart is empty.
                 </Typography>
               )}
@@ -143,7 +164,7 @@ const CartDrawer = () => {
           <Button
             variant="contained"
             color="primary"
-            sx={{ mt: 1 }}
+            sx={{ mt: 1, "&:hover": { bgcolor: "primary.dark" } }}
             fullWidth
             onClick={() => console.log("Proceed to checkout")}
           >

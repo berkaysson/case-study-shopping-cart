@@ -7,19 +7,19 @@ export const ProductItemImage = ({ product, handleAddToCart }) => {
   return (
     <Box sx={{ position: "relative", p: 1 }}>
       <Fab
-        color="warning"
+        color="primary"
         size="medium"
         className="add-cart-btn"
         onClick={handleAddToCart}
         sx={{
           right: 16,
-          bottom: 16,
+          bottom: 24,
           zIndex: 9,
           opacity: 0.8,
           position: "absolute",
         }}
       >
-        <AddShoppingCart />
+        <AddShoppingCart sx={{ width: 24, height: 24 }} />
       </Fab>
 
       <Tooltip placement="bottom-end">

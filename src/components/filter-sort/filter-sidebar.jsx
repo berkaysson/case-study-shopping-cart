@@ -10,7 +10,7 @@ import {
   Select,
   MenuItem,
   IconButton,
-  FormLabel,
+  Divider,
 } from "@mui/material";
 import { Close, FilterList } from "@mui/icons-material";
 
@@ -31,9 +31,9 @@ const marksLabel = [
   { value: 200, label: "$200" },
 ];
 
-const FilterSidebar = ({ filters, setFilters, onApplyFilters }) => {
+const FilterSidebar = ({ filters, setFilters }) => {
   const [open, setOpen] = useState(false);
-  const [tempFilters, setTempFilters] = useState(filters); // Temporary state to hold filter values
+  const [tempFilters, setTempFilters] = useState(filters);
 
   const handleToggleDrawer = () => {
     setOpen(!open);
@@ -70,7 +70,7 @@ const FilterSidebar = ({ filters, setFilters, onApplyFilters }) => {
   return (
     <>
       <Button
-        variant="outlined"
+        variant="contained"
         startIcon={<FilterList />}
         onClick={handleToggleDrawer}
       >
@@ -78,13 +78,26 @@ const FilterSidebar = ({ filters, setFilters, onApplyFilters }) => {
       </Button>
 
       <Drawer anchor="right" open={open} onClose={handleToggleDrawer}>
-        <Box sx={{ width: 320, padding: 4 }} role="presentation">
+        <Box
+          sx={{
+            minWidth: 320,
+            p: 2,
+            bgcolor: (theme) => theme.palette.background.paper,
+            display: "flex",
+            flexDirection: "column",
+            height: "100%",
+            overflowX: "hidden",
+          }}
+          role="presentation"
+        >
           <Typography
-            variant="h6"
+            variant="h4"
             sx={{
               display: "flex",
               justifyContent: "space-between",
               alignItems: "center",
+              color: (theme) => theme.palette.text.primary,
+              width: "100%",
             }}
           >
             Filters
@@ -93,24 +106,26 @@ const FilterSidebar = ({ filters, setFilters, onApplyFilters }) => {
             </IconButton>
           </Typography>
 
-          <Button
-            variant="outlined"
-            color="error"
-            onClick={handleClearAll}
-            sx={{ my: 2 }}
-          >
-            Clear All
-          </Button>
-
-          {/* Category Filter */}
-          <FormControl fullWidth sx={{ my: 3 }}>
-            <FormLabel id="category-label">Category</FormLabel>
+          <FormControl fullWidth>
+            <Typography
+              sx={{
+                my: 1,
+                textAlign: "center",
+                color: (theme) => theme.palette.text.secondary,
+              }}
+              variant="subtitle2"
+            >
+              Category
+            </Typography>
             <Select
               labelId="category-label"
               value={tempFilters.category || "all"}
               onChange={handleFilterCategory}
+              size="small"
             >
-              <MenuItem value="all">All</MenuItem>
+              <MenuItem key="all" value="all">
+                All
+              </MenuItem>
               {categories.map((category) => (
                 <MenuItem key={category} value={category}>
                   {category}
@@ -119,9 +134,18 @@ const FilterSidebar = ({ filters, setFilters, onApplyFilters }) => {
             </Select>
           </FormControl>
 
+          <Divider sx={{ my: 2 }} />
+
           {/* Price Range Filter */}
-          <Box display="flex" flexDirection="column" sx={{ my: 4 }}>
-            <Typography sx={{ mb: 1, textAlign: "center" }} variant="subtitle2">
+          <Box display="flex" flexDirection="column" sx={{ px: 2 }}>
+            <Typography
+              sx={{
+                mb: 1,
+                textAlign: "center",
+                color: (theme) => theme.palette.text.secondary,
+              }}
+              variant="subtitle2"
+            >
               Price
             </Typography>
             <Slider
@@ -132,14 +156,23 @@ const FilterSidebar = ({ filters, setFilters, onApplyFilters }) => {
               max={200}
               marks={marksLabel}
               getAriaValueText={(value) => `$${value}`}
-              valueLabelDisplay="on"
-              sx={{ my: 2 }}
+              valueLabelDisplay="auto"
+              sx={{ color: (theme) => theme.palette.primary.main }}
             />
           </Box>
 
+          <Divider sx={{ my: 2 }} />
+
           {/* Rating Filter */}
-          <Box display="flex" flexDirection="column" sx={{ my: 4 }}>
-            <Typography sx={{ mb: 1, textAlign: "center" }} variant="subtitle2">
+          <Box display="flex" flexDirection="column" sx={{ mb: 2 }}>
+            <Typography
+              sx={{
+                mb: 1,
+                textAlign: "center",
+                color: (theme) => theme.palette.text.secondary,
+              }}
+              variant="subtitle2"
+            >
               Rating
             </Typography>
             {Array.from({ length: 5 }, (_, index) => (
@@ -147,14 +180,13 @@ const FilterSidebar = ({ filters, setFilters, onApplyFilters }) => {
                 key={index}
                 onClick={() => handleFilterRating(5 - index)}
                 sx={{
-                  mb: 1,
-                  gap: 1,
+                  mb: 0.5,
                   p: 0.5,
                   display: "flex",
                   borderRadius: 1,
                   cursor: "pointer",
-                  alignItems: "center",
-                  "&:hover": { opacity: 0.6 },
+                  justifyContent: "center",
+                  "&:hover": { bgcolor: (theme) => theme.palette.action.hover },
                   ...(tempFilters.rate === 5 - index && {
                     bgcolor: "action.selected",
                   }),
@@ -164,9 +196,21 @@ const FilterSidebar = ({ filters, setFilters, onApplyFilters }) => {
               </Box>
             ))}
           </Box>
+          <Button
+            variant="outlined"
+            color="error"
+            onClick={handleClearAll}
+            sx={{ my: 2 }}
+          >
+            Clear All
+          </Button>
 
           {/* Apply Filters Button */}
-          <Button variant="contained" onClick={handleApplyFilters}>
+          <Button
+            sx={{ position: "fixed", bottom: 16, right: 16 }}
+            variant="contained"
+            onClick={handleApplyFilters}
+          >
             Apply Filters
           </Button>
         </Box>

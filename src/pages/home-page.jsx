@@ -25,7 +25,7 @@ const HomePage = () => {
       </Stack>
     );
   if (isError)
-    return <Typography color="error">Error loading products</Typography>;
+    return <Typography color="error.main">Error loading products</Typography>;
 
   return (
     <>
@@ -45,7 +45,7 @@ const HomePage = () => {
           }
           endMessage={
             <Typography
-              color="textSecondary"
+              color="text.secondary"
               align="center"
               sx={{ my: 2 }}
               variant="body1"
