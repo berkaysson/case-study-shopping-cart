@@ -6,7 +6,7 @@ import FilterSidebar from "./filter-sidebar";
 
 const FilterSortBar = () => {
   const { setSortOption, setFilters, filters } = useProductContext();
-  const [anchorEl, setAnchorEl] = useState(null);
+  const [anchorEl, setAnchorEl] = useState(null); // State for the sort toolkit menu
 
   const sortOptions = [
     "Featured",
@@ -44,6 +44,7 @@ const FilterSortBar = () => {
         boxShadow: (theme) => theme.shadows[1],
       }}
     >
+      {/* Logo, replace here witg brand */}
       <Typography
         variant="h1"
         component="h1"
@@ -51,7 +52,9 @@ const FilterSortBar = () => {
       >
         MyCommerce
       </Typography>
+
       <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+        {/* Sort Button */}
         <Button
           variant="contained"
           startIcon={<SortIcon />}
@@ -89,6 +92,7 @@ const FilterSortBar = () => {
           ))}
         </Menu>
 
+        {/* Filter Sidebar */}
         <FilterSidebar filters={filters} setFilters={setFilters} />
       </Box>
     </Box>

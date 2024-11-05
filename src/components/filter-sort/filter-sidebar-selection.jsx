@@ -10,6 +10,7 @@ import {
   Rating,
 } from "@mui/material";
 
+// currently all categories, if backend exist then replace with backend data
 const categories = [
   "Electronics",
   "Fitness",
@@ -19,6 +20,7 @@ const categories = [
   "Health",
 ];
 
+// currently all price ranges, if backend exist then replace with backend data
 const marksLabel = [
   { value: 0, label: "$0" },
   { value: 50, label: "$50" },

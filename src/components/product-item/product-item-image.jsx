@@ -11,6 +11,7 @@ export const ProductItemImage = ({
 }) => {
   return (
     <Box sx={{ position: "relative", p: 1 }}>
+      {/* Add or remove to cart bıtton */}
       <Fab
         color={isInCart ? "error" : "primary"}
         size="medium"
@@ -36,6 +37,7 @@ export const ProductItemImage = ({
         )}
       </Fab>
 
+      {/* Lazy Load Image */}
       <Image
         alt={product.name}
         src={product.imageUrl}

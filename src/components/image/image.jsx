@@ -11,6 +11,7 @@ const ImageWrapper = styled(Box)({
   height: "100%",
 });
 
+// A component for lazy loading images
 const Image = forwardRef(
   (
     { alt, src, ratio, sx, overlay = false, effect = "blur", ...other },
@@ -39,6 +40,7 @@ const Image = forwardRef(
             }}
           />
         )}
+        {/* Lazıy Load Image */}
         <LazyLoadImage
           alt={alt}
           src={src}

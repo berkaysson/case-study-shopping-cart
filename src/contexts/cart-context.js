@@ -6,10 +6,12 @@ export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
   const [cartOpen, setCartOpen] = useState(false);
 
+  // Toggle the cart open or closed
   const toggleCartOpen = useCallback(() => {
     setCartOpen((prevCartOpen) => !prevCartOpen);
   }, []);
 
+  // Add an item to the cart, or if it already exists, increment its quantity
   const addItemToCart = useCallback((product) => {
     setCartItems((prevItems) => {
       const existingItem = prevItems.find((item) => item.id === product.id);
@@ -25,12 +27,14 @@ export const CartProvider = ({ children }) => {
     });
   }, []);
 
+  // Remove an item from the cart
   const removeItemFromCart = useCallback((productId) => {
     setCartItems((prevItems) =>
       prevItems.filter((item) => item.id !== productId)
     );
   }, []);
 
+  // Update the quantity of an item in the cart
   const updateItemQuantity = useCallback((productId, quantity) => {
     setCartItems((prevItems) =>
       prevItems.map((item) =>
@@ -39,12 +43,14 @@ export const CartProvider = ({ children }) => {
     );
   }, []);
 
+  // Calculate the total value-rpridce of all items in the cart
   const totalCartValue = useMemo(
     () =>
       cartItems.reduce((total, item) => total + item.price * item.quantity, 0),
     [cartItems]
   );
 
+  // Calculate the total number of items in the cart
   const cartItemCount = useMemo(
     () => cartItems.reduce((count, item) => count + item.quantity, 0),
     [cartItems]
@@ -54,7 +60,7 @@ export const CartProvider = ({ children }) => {
     cartItems,
     totalCartValue,
     cartItemCount,
-    cartOpen
+    cartOpen,
   });
 
   const contextValue = useMemo(
@@ -66,7 +72,7 @@ export const CartProvider = ({ children }) => {
       totalCartValue,
       cartItemCount,
       toggleCartOpen,
-      cartOpen
+      cartOpen,
     }),
     [
       cartItems,
@@ -76,7 +82,7 @@ export const CartProvider = ({ children }) => {
       totalCartValue,
       cartItemCount,
       toggleCartOpen,
-      cartOpen
+      cartOpen,
     ]
   );
 

@@ -1,5 +1,12 @@
 import { useSpring } from "react-spring";
 
+/**
+ * useScrollAnimation
+ * This hook is intended to be used to animate the fade in and translation
+ * of an element as it comes into view when the user scrolls.
+ *
+ * @returns {object} An object with the animated styles.
+ */
 export const useScrollAnimation = () => {
   const styles = useSpring({
     from: { opacity: 0, transform: "translateY(20px)" },

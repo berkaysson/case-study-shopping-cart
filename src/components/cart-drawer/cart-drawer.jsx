@@ -28,19 +28,22 @@ const CartDrawer = () => {
 
   const toast = useToast();
 
+  // Function to handle quantity change
   const handleQuantityChange = (productId, quantity) => {
     const parsedQuantity = Math.max(1, parseInt(quantity) || 1);
     updateItemQuantity(productId, parsedQuantity);
   };
 
+  // Function to remove all items from the cart
   const handleRemoveAll = () => {
     cartItems.forEach((item) => removeItemFromCart(item.id));
   };
 
+  // Function to handle checkout
   const handleCheckout = async () => {
     toast.showLoadingToast("Processing your checkout...", "checkoutLoading");
     setIsCheckoutLoading(true);
-    await new Promise((resolve) => setTimeout(resolve, 1200));
+    await new Promise((resolve) => setTimeout(resolve, 1200)); // simulate network request
     setIsCheckoutLoading(false);
     toast.dismissToast("checkoutLoading");
     toast.showToast("Checkout Successful, Thanks!", "success");

@@ -14,6 +14,7 @@ export const ToastProvider = ({ children }) => {
     id: null,
   });
 
+  // Function to show a toast message
   const showToast = useCallback(
     (message, severity = "info", duration = 3000, id = null) => {
       setToast({ open: true, message, severity, duration, id, loading: false });
@@ -21,10 +22,12 @@ export const ToastProvider = ({ children }) => {
     []
   );
 
+  // Function to show a loading toast message
   const showLoadingToast = useCallback((message, id) => {
     setToast({ open: true, message, severity: "info", loading: true, id });
   }, []);
 
+  // Function to dismiss a specific toast
   const dismissToast = useCallback((id) => {
     setToast((prev) => {
       if (prev.id === id) {
@@ -34,6 +37,7 @@ export const ToastProvider = ({ children }) => {
     });
   }, []);
 
+  // Function to close the toast
   const closeToast = (_, reason) => {
     if (reason === "clickaway") return;
     setToast((prev) => ({ ...prev, open: false }));

@@ -17,7 +17,6 @@ function App() {
           <CartProvider>
             <ProductProvider>
               <Stack className="app" sx={{ height: "100vh" }}>
-                {/* <Navigation /> */}
                 <HomePage />
               </Stack>
             </ProductProvider>

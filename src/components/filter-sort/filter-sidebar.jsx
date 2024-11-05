@@ -8,33 +8,39 @@ const FilterSidebar = ({ filters, setFilters }) => {
   const [open, setOpen] = useState(false);
   const [tempFilters, setTempFilters] = useState(filters);
 
+  // Function to toggle the drawer
   const handleToggleDrawer = () => {
     setOpen(!open);
   };
 
+  // Function to handle category filter
   const handleFilterCategory = (event) => {
     const newCategory =
       event.target.value === "all" ? null : event.target.value;
     setTempFilters((prev) => ({ ...prev, category: newCategory }));
   };
 
+  // Function to handle price range filter
   const handleFilterPriceRange = (event, newValue) => {
     setTempFilters((prev) => ({ ...prev, priceRange: newValue }));
   };
 
+  // Function to handle rating filter
   const handleFilterRating = (value) => {
     setTempFilters((prev) => ({ ...prev, rate: value }));
   };
 
+  // Function to clear all filters
   const handleClearAll = () => {
     const resetFilters = {
       category: "all",
-      priceRange: [0, 200],
+      priceRange: [0, 200], // Default price range
       rate: null,
     };
     setTempFilters(resetFilters);
   };
 
+  // Function to apply filters
   const handleApplyFilters = () => {
     setFilters(tempFilters);
     handleToggleDrawer();
@@ -63,6 +69,7 @@ const FilterSidebar = ({ filters, setFilters }) => {
           }}
           role="presentation"
         >
+          {/* Filters Header */}
           <Typography
             variant="h4"
             sx={{
@@ -79,6 +86,7 @@ const FilterSidebar = ({ filters, setFilters }) => {
             </IconButton>
           </Typography>
 
+          {/* Filters Selections like category price range and rate */}
           <FilterSidebarSelection
             tempFilters={tempFilters}
             handleFilterCategory={handleFilterCategory}
@@ -86,6 +94,7 @@ const FilterSidebar = ({ filters, setFilters }) => {
             handleFilterRating={handleFilterRating}
           />
 
+          {/* Clear All Button */}
           <Button
             variant="outlined"
             color="error"

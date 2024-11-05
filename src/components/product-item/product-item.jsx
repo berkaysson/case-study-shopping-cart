@@ -21,16 +21,19 @@ const ProductItem = ({ product }) => {
   const toast = useToast();
   const spring = useScrollAnimation();
 
+  // Add or remove to cart bttton
   const handleAddToCart = () => {
     addItemToCart(product);
     toast.showToast("Added to Cart", "success", 800);
   };
 
+  // Add or remove to cart button
   const handleRemoveFromCart = () => {
     removeItemFromCart(product.id);
     toast.showToast("Removed from Cart", "success", 800);
   };
 
+  // Check if the product is in the cart
   const isInCart = cartItems.some((item) => item.id === product.id);
 
   return (
@@ -52,6 +55,7 @@ const ProductItem = ({ product }) => {
               : "none",
           }}
         >
+          {/* Add or remove to cart button onto lazy load image */}
           <ProductItemImage
             product={product}
             handleAddToCart={handleAddToCart}
@@ -59,6 +63,7 @@ const ProductItem = ({ product }) => {
             handleRemoveFromCart={handleRemoveFromCart}
           />
 
+          {/* Product info */}
           <Stack spacing={1} sx={{ p: 2 }}>
             <Typography variant="subtitle1" noWrap>
               {product.name}

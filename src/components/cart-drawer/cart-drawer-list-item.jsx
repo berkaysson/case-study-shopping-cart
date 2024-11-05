@@ -30,6 +30,7 @@ const CartDrawerListItem = ({
         mb: 1,
       }}
     >
+      {/* Item Details */}
       <Box sx={{ flex: 1, overflow: "hidden" }}>
         <Typography noWrap>{item.name}</Typography>
         <Typography
@@ -56,7 +57,7 @@ const CartDrawerListItem = ({
             borderRadius: 1,
             boxShadow: 1,
           }}
-          inputProps={{ min: 1 }}
+          slotProps={{ input: { min: 1 } }}
         />
 
         {/* Remove Item Button */}

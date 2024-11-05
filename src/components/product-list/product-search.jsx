@@ -24,6 +24,7 @@ const ProductSearch = () => {
       alignItems={"center"}
       justifyContent={"center"}
     >
+      {/* Search field with adornment of clear button */}
       <TextField
         variant="outlined"
         placeholder="Search for products by name..."
@@ -55,6 +56,8 @@ const ProductSearch = () => {
           },
         }}
       />
+
+      {/* Search button */}
       <IconButton
         variant="contained"
         color="primary"

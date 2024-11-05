@@ -65,6 +65,7 @@ const theme = createTheme({
   shape: {
     borderRadius: 8,
   },
+  // Shadows for all MUI shadow values
   shadows: [
     "none",
     "rgba(99, 99, 99, 0.2) 0px 1px 4px 0px",
