@@ -4,7 +4,7 @@
     {
       "id": "dffbfb62-9d8a-45ab-a2f8-37043e4182d5",
       "name": "Wireless Bluetooth Headphones",
-      "imageUrl": "https://img.freepik.com/free-photo/fitness-girl-with-wireless-headphones_1385-417.jpg?t=st=1730736500~exp=1730740100~hmac=1e4e68ee32dcb2491c67b98b187528857daf14c863c0758c273c390bb968731b&w=900",
+      "imageUrl": "https://img.freepik.com/free-photo/still-life-tech-device_23-2150722706.jpg?t=st=1730819732~exp=1730823332~hmac=533016782cb604fbbad47f406b773c8576dc21ab5188b37618aacdecd55bc237&w=740",
       "price": 59.99,
       "category": "Electronics",
       "popularity": 120,
@@ -13,7 +13,7 @@
     {
       "id": "d9ec3c76-d8e3-4c5a-9c3c-b0a75e70a45e",
       "name": "Eco-Friendly Yoga Mat",
-      "imageUrl": "https://img.freepik.com/free-vector/realistic-yoga-myofascial-massage-icons-set-with-rug-mat-foam-roller-isolated-vector-illustration_1284-79048.jpg?t=st=1730736411~exp=1730740011~hmac=49dff13a7e6b6536719d31d35b6c9016356db418aceccc6257daf4900eae9bc4&w=996",
+      "imageUrl": "https://img.freepik.com/free-photo/high-angle-yoga-mat-water-bottle-arrangement_23-2149442710.jpg?t=st=1730819775~exp=1730823375~hmac=d8d408405b1040daad209f12ca0e27c1711bf93cc7eec5459b148b2989b8cc67&w=740",
       "price": 29.99,
       "category": "Fitness",
       "popularity": 80,
@@ -22,7 +22,7 @@
     {
       "id": "b3f3d9e2-1f2d-4c9c-8b07-c5824e9f18c2",
       "name": "Smartwatch with Heart Rate Monitor",
-      "imageUrl": "https://cdn.stocksnap.io/img-thumbs/960w/watch-technology_OJYGY9OEB9.jpg",
+      "imageUrl": "https://img.freepik.com/free-photo/still-life-tech-device_23-2150722649.jpg?t=st=1730819801~exp=1730823401~hmac=95e8cc71289d4d436cdad206dd2add5ac1e96bce1a849d5081fad75c99a87b6e&w=740",
       "price": 99.99,
       "category": "Electronics",
       "popularity": 150,
@@ -40,7 +40,7 @@
     {
       "id": "4e36f9e1-3e8b-4d6a-99d1-2aaf7e74e74b",
       "name": "Portable Phone Charger",
-      "imageUrl": "https://img.freepik.com/free-photo/charger-usb-cable-type-c-red-background_58702-4607.jpg?t=st=1730736618~exp=1730740218~hmac=d8bea0c960f045af02db95d48fa6f431e1c66fe7e93e0cb1f23078455eb749b4&w=900",
+      "imageUrl": "https://img.freepik.com/free-photo/flatlay-smartphone-accessories_53876-33530.jpg?t=st=1730819833~exp=1730823433~hmac=c0794a1806f3b4526f38de11030a6cc5c435541dec33a7bc8a4a14067d04f26c&w=740",
       "price": 24.99,
       "category": "Electronics",
       "popularity": 200,
@@ -57,8 +57,8 @@
     },
     {
       "id": "10b7e1e5-9e79-4c94-a07e-b51f437a6cb1",
-      "name": "Men's Running Shoes",
-      "imageUrl": "https://img.freepik.com/premium-photo/women-s-black-leather-boots-white-background-shoes-options-its-layout-autumn-shoes-boots-autumn-boots-shoes-close-up_173815-21340.jpg?w=900",
+      "name": "Men's Shoes",
+      "imageUrl": "https://img.freepik.com/free-photo/dark-blue-show-rock_52683-94821.jpg?t=st=1730819870~exp=1730823470~hmac=43c6e987961e3ebfa0fdd42534bb3d66a13a2b6c2f7adc6acaa220c7b42503e0&w=740",
       "price": 89.99,
       "category": "Fashion",
       "popularity": 130,
@@ -67,7 +67,7 @@
     {
       "id": "8b9b2c5f-bbcf-4b89-80c2-54b8e487e8c0",
       "name": "Wireless Mouse",
-      "imageUrl": "https://img.freepik.com/free-photo/red-computer-mouse_1260-13.jpg?t=st=1730736693~exp=1730740293~hmac=72502f572814ef5cc74a9d3af72e8ad419576a9e9555c9f6a33852da09f01679&w=900",
+      "imageUrl": "https://img.freepik.com/free-vector/mouse_24908-54360.jpg?t=st=1730819899~exp=1730823499~hmac=00aa811226012f2176d07b7462a3f58f5af4911232c7ef2cdd5d02a0e453470b&w=740",
       "price": 19.99,
       "category": "Electronics",
       "popularity": 110,
@@ -165,8 +165,8 @@
     },
     {
       "id": "f67f8e5d-df2a-4c3f-b3e3-ef48d9aa2d43",
-      "name": "Gaming Mouse Pad",
-      "imageUrl": "https://img.freepik.com/free-photo/party-space-ready-online-celebration_23-2149347281.jpg?t=st=1730737257~exp=1730740857~hmac=b6e8fcaf3e6f2ed185c0bb955866aeebfbe923c24675703822ba516a315f869f&w=900",
+      "name": "Gaming Mouse",
+      "imageUrl": "https://img.freepik.com/free-photo/wireless-earbuds-with-neon-cyberpunk-style-lighting_23-2151074274.jpg?t=st=1730819967~exp=1730823567~hmac=5c6dd910b49b007ca17674e0e1e1b80e91ba07c33ba0abac952ee01ab7c3f7fd&w=740",
       "price": 19.99,
       "category": "Entertainment",
       "popularity": 85,
@@ -220,16 +220,16 @@
     {
       "id": "ca48e8b5-daa1-4184-9b09-8a57b75c4a9b",
       "name": "Pet Grooming Kit",
-      "imageUrl": "https://img.freepik.com/free-photo/pet-accessories-still-life-concept-with-grooming-objects-food_23-2148949582.jpg?t=st=1730737391~exp=1730740991~hmac=d8b1862278b18d1e0a903ce7f9d2c60812220e7f269e26464c7d0cc38bdca962&w=900",
+      "imageUrl": "https://img.freepik.com/premium-photo/layout-grooming-tools-blue-background_310443-412.jpg?w=740",
       "price": 39.99,
       "category": "Health",
       "popularity": 65,
-      "rate": 4.3
+      "rate": 3.1
     },
     {
       "id": "ed473e36-7689-4dbe-91ff-0c1a0d4f5c73",
       "name": "Electric Screwdriver Set",
-      "imageUrl": "https://img.freepik.com/free-photo/flat-lay-screw-collection_23-2148557983.jpg?t=st=1730737412~exp=1730741012~hmac=9cfb7459fc2a1315157037e8dd701f44711eb7a6b4e41be2fef416b2daa4e1e8&w=900",
+      "imageUrl": "https://img.freepik.com/free-photo/top-view-screws-with-screwdriver_23-2148428331.jpg?t=st=1730820088~exp=1730823688~hmac=aa64c61951cf4f49c25e76a6e95bb27dbd1c65806ead544c169862ef753d4afa&w=740",
       "price": 49.99,
       "category": "Home Appliances",
       "popularity": 80,
