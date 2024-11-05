@@ -1,4 +1,3 @@
-// src/components/product-list/product-list.jsx
 import React from "react";
 import ProductItem from "../product-item/product-item";
 
