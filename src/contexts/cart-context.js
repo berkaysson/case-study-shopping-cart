@@ -65,7 +65,8 @@ export const CartProvider = ({ children }) => {
       updateItemQuantity,
       totalCartValue,
       cartItemCount,
-      toggleCartOpen
+      toggleCartOpen,
+      cartOpen
     }),
     [
       cartItems,
@@ -74,7 +75,8 @@ export const CartProvider = ({ children }) => {
       updateItemQuantity,
       totalCartValue,
       cartItemCount,
-      toggleCartOpen
+      toggleCartOpen,
+      cartOpen
     ]
   );
 
