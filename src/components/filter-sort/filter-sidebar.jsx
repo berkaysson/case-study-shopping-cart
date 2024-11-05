@@ -200,7 +200,7 @@ const FilterSidebar = ({ filters, setFilters }) => {
             variant="outlined"
             color="error"
             onClick={handleClearAll}
-            sx={{ my: 2 }}
+            sx={{ my: 2, mb: 8 }}
           >
             Clear All
           </Button>

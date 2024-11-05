@@ -18,6 +18,8 @@ const ProductList = ({ products }) => {
           mt: 12,
           bgcolor: "background.darkPaper",
           borderRadius: 1.5,
+          alignItems: "center",
+          justifyContent: "center",
         }}
       >
         {products.map((product) => (

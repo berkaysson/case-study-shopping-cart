@@ -19,8 +19,9 @@ const ProductItem = ({ product }) => {
           transform: "translateY(-2px)",
         },
         width: 1,
-        maxWidth: 450,
+        maxWidth: 380,
         transition: "all 0.2s ease-in-out",
+        mx: "auto",
       }}
     >
       <ProductItemImage product={product} handleAddToCart={handleAddToCart} />

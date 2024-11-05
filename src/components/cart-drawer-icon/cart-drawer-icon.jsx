@@ -9,7 +9,7 @@ export function CartDrawerIcon() {
     <Box
       sx={{
         right: 0,
-        top: 250,
+        top: 120,
         zIndex: 999,
         display: "flex",
         cursor: "pointer",
@@ -20,11 +20,11 @@ export function CartDrawerIcon() {
         bgcolor: "background.paper",
         "&:hover": { boxShadow: 1 },
         boxShadow: 4,
-        padding: (theme) => theme.spacing(1.5, 2),
+        padding: { xs: "12px 12px", sm: "12px 20px" },
       }}
       onClick={toggleCartOpen}
     >
-      <Badge showZero badgeContent={cartItemCount} color="error" max={99}>
+      <Badge showZero badgeContent={cartItemCount} color="error" max={10}>
         <ShoppingCart sx={{ width: 24, height: 24 }} />
       </Badge>
     </Box>

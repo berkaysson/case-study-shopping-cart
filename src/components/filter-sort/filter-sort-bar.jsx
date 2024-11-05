@@ -51,7 +51,13 @@ const FilterSortBar = () => {
         boxShadow: (theme) => theme.shadows[1],
       }}
     >
-      <Typography variant="h1">MyCommerce</Typography>
+      <Typography
+        variant="h1"
+        component="h1"
+        sx={{ display: { xs: "none", sm: "block" } }}
+      >
+        MyCommerce
+      </Typography>
       <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
         <Tooltip title="Sort">
           <IconButton onClick={handleSortClick} aria-label="sort">
