@@ -12,8 +12,8 @@ import {
 } from "@mui/material";
 import { Close, Delete } from "@mui/icons-material";
 import { useCartContext } from "../../hooks/use-cart-context";
-import { CartDrawerIcon } from "../cart-drawer-icon/cart-drawer-icon";
 import { useToast } from "../../hooks/use-toast";
+import { CartDrawerIcon } from "./cart-drawer-icon";
 
 const CartDrawer = () => {
   const [isCheckoutLoading, setIsCheckoutLoading] = useState(false);
