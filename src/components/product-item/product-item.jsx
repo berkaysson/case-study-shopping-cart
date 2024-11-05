@@ -2,12 +2,16 @@ import React from "react";
 import { Card, Typography, Stack, Box, Rating } from "@mui/material";
 import { useCartContext } from "../../hooks/use-cart-context";
 import { ProductItemImage } from "./product-item-image";
+import { useToast } from "../../hooks/use-toast";
 
 const ProductItem = ({ product }) => {
   const { addItemToCart } = useCartContext();
 
+  const toast = useToast();
+
   const handleAddToCart = () => {
     addItemToCart(product);
+    toast.showToast("Added to Cart", "success", 800);
   };
 
   return (

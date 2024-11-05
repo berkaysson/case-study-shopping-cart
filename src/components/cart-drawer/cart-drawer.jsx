@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Drawer,
   Box,
@@ -13,8 +13,11 @@ import {
 import { Close, Delete } from "@mui/icons-material";
 import { useCartContext } from "../../hooks/use-cart-context";
 import { CartDrawerIcon } from "../cart-drawer-icon/cart-drawer-icon";
+import { useToast } from "../../hooks/use-toast";
 
 const CartDrawer = () => {
+  const [isCheckoutLoading, setIsCheckoutLoading] = useState(false);
+
   const {
     cartItems,
     toggleCartOpen,
@@ -24,6 +27,8 @@ const CartDrawer = () => {
     totalCartValue,
   } = useCartContext();
 
+  const toast = useToast();
+
   const handleQuantityChange = (productId, quantity) => {
     const parsedQuantity = Math.max(1, parseInt(quantity) || 1);
     updateItemQuantity(productId, parsedQuantity);
@@ -31,6 +36,17 @@ const CartDrawer = () => {
 
   const handleRemoveAll = () => {
     cartItems.forEach((item) => removeItemFromCart(item.id));
+  };
+
+  const handleCheckout = async () => {
+    toast.showLoadingToast("Processing your checkout...", "checkoutLoading");
+    setIsCheckoutLoading(true);
+    await new Promise((resolve) => setTimeout(resolve, 1200));
+    setIsCheckoutLoading(false);
+    toast.dismissToast("checkoutLoading");
+    toast.showToast("Checkout Successful, Thanks!", "success");
+    handleRemoveAll();
+    toggleCartOpen();
   };
 
   return (
@@ -123,6 +139,7 @@ const CartDrawer = () => {
                       <IconButton
                         sx={{ ml: 1 }}
                         onClick={() => removeItemFromCart(item.id)}
+                        disabled={isCheckoutLoading}
                       >
                         <Delete color="error" />
                       </IconButton>
@@ -155,7 +172,7 @@ const CartDrawer = () => {
             sx={{ mt: 2 }}
             fullWidth
             onClick={handleRemoveAll}
-            disabled={cartItems.length === 0}
+            disabled={cartItems.length === 0 || isCheckoutLoading}
           >
             Remove All
           </Button>
@@ -166,7 +183,8 @@ const CartDrawer = () => {
             color="primary"
             sx={{ mt: 1, "&:hover": { bgcolor: "primary.dark" } }}
             fullWidth
-            onClick={() => console.log("Proceed to checkout")}
+            onClick={handleCheckout}
+            disabled={cartItems.length === 0 || isCheckoutLoading}
           >
             Checkout
           </Button>
